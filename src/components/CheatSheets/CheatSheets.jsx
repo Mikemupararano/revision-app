@@ -1,32 +1,34 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Document, Page } from 'react-pdf';
-import pdf from './Javascript PDF';
+import pdf from './Javascript PDF'
 
 function CheatSheets() {
-    const [numPages, setNumPages] = useState(null);
+    const [numPages, setNumPages] = useState();
     const [pageNumber, setPageNumber] = useState(1);
 
-    const onDocumentLoadSuccess = ({ numPages }) => {
+    function onDocumentLoadSuccess({ numPages }):
         setNumPages(numPages);
-    };
 
-    return (
-        <div>
-            <Document file={pdf} onLoadSuccess={onDocumentLoadSuccess}>
-                {Array.from(Array(numPages), (x, i) => i + 1).map(pageNumber => (
-                    <Page 
-                        key={pageNumber}
-                        pageNumber={pageNumber} 
-                        renderTextLayer={false} 
-                        renderAnnotationLayer={false}
-                    />
-                ))}
-            </Document>
-            <p>
-                Page {pageNumber} of {numPages}
-            </p>
-        </div>
-    );
 }
 
-export default CheatSheets;
+return (
+    <div>
+        <Document file={pdf} onLoadSuccess={onDocumentLoadSuccess}>
+            {Array.apply(null, Array(numPages))
+                .map((x, i) => i + 1)
+                .map(page)=>) {
+                return(
+            <Page
+                pageNumber={page}
+                renderTextlayer={false}
+                renderAnnotationLayer={false}
+            />;
+            );
+            }
+        </Document>
+        <p>
+            Page {pageNumber} of {numPages}
+        </p>
+    </div>
+);
+export defualt CheatSheets;
