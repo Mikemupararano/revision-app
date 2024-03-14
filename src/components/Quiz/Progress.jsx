@@ -29,11 +29,11 @@ function Progress({ onRestartQuiz, onExit }) {
 
   // Render the Progress component
   return (
-    <>
+    <div className="progress-container">
       {/* Header displaying the title of the progress */}
-      <h2>Quiz Progress</h2>
+      <h2 className="text-danger">Quiz Progress</h2>
       {/* Progress bars for each language */}
-      <div className="progress-container">
+      <div className="container">
         <div className="progress-item">
           <h3>HTML Progress: {calculatePercentage('html')}%</h3>
           <div className="progress">
@@ -77,10 +77,10 @@ function Progress({ onRestartQuiz, onExit }) {
 
       {/* Buttons to restart the quiz or exit */}
       <div className="progress-buttons">
-        <button className="btn-primary" onClick={onRestartQuiz}>PLAY AGAIN</button>
-        <button className="btn-primary" onClick={onExit}>Exit</button>
+        <button className="btn-small text-black" onClick={onRestartQuiz}>PLAY AGAIN</button>
+        <button className="btn-exit" onClick={onExit}>Exit</button>
       </div>
-    </>
+      </div>
   );
 }
 

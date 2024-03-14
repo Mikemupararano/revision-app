@@ -70,7 +70,7 @@ function QuizGame({ onFinish, onExit, selectedLanguage }) {
 
     return (<>
       <div className="quiz-game">
-        <h1>Game</h1>
+        <h1 className="text-danger">Game</h1>
         <p>Chosen Language: {selectedLanguage}</p>
         <div className="container mt-sm-5 my-1">
           {showSummary ? (
@@ -90,10 +90,13 @@ function QuizGame({ onFinish, onExit, selectedLanguage }) {
             />
           )}
         </div>
-        <button className="btn-primary" onClick={handleFinish}>FINISH</button>
-        <button className="btn-primary" onClick={handleExit}>EXIT</button>
+        <div className="buttonsQG">
+          <button className="btn-small text-black" onClick={handleFinish}>FINISH</button>
+          <button className="btn-exit" onClick={handleExit}>EXIT</button>
+        </div>
       </div>
-    </>);
+    </>
+  );
 }
 
 export default QuizGame;

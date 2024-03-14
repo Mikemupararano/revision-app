@@ -12,8 +12,11 @@ function Quiz() {
   const [showEnd, setShowEnd] = useState(false);
   const [showProgress, setShowProgress] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState('html');
+  const [showButton, setShowButton ] = useState(true);
+
 
   const handleWelcome = () => {
+    setShowButton(false);
     setShowStart(true);
     setShowGame(false);
     setShowEnd(false);
@@ -52,12 +55,13 @@ function Quiz() {
 
   return (
     <>
-      <button className="btn-primary" onClick={handleWelcome}>START QUIZ</button>
+      
       <div className="quiz-container">
+      {showButton ? <button className="btn-large" onClick={handleWelcome}>START QUIZ</button> : <></>}
         {showStart && <QuizStart onPlay={handleStartQuiz} />}
         {showGame && <QuizGame onFinish={handleFinishGame} onExit={handleWelcome} selectedLanguage={selectedLanguage} />}
         {showEnd && <QuizEnd onExit={handleWelcome} onShowProgress={handleShowProgress} onRestartQuiz={handleRestartQuiz} selectedLanguage={selectedLanguage} />}
-        {showProgress && <Progress onRestartQuiz={handleRestartQuiz} onExit={handleWelcome} onShowProgress={handleShowProgress} />} {/* Add onShowProgress prop here */}
+        {showProgress && <Progress onRestartQuiz={handleRestartQuiz} onExit={handleWelcome} onShowProgress={handleShowProgress} />}
       </div>
     </>
   );
