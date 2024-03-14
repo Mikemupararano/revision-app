@@ -7,9 +7,9 @@ function App() {
     <div>
       <Router> {/* Wrap your routes with Router component */}
         <div>
-          <Route path="/" exact render={() => <Description searchTerm="Home" />} />
-          <Route path="/about" render={() => <Description searchTerm="About" />} />
-          <Route path="/contact" render={() => <Description searchTerm="Contact" />} />
+          <Route path="/html" exact render={() => <Description searchTerm="HTML" />} />
+          <Route path="/css" render={() => <Description searchTerm="CSS" />} />
+          <Route path="/javascript" render={() => <Description searchTerm="JavaScript" />} />
           {/* Add more routes as needed */}
         </div>
       </Router> {/* Close the Router component */}
