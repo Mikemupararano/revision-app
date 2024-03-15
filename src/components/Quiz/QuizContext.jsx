@@ -4,6 +4,7 @@ import React, { createContext, useState, useEffect } from 'react';
 export const QuizContext = createContext();
 
 export const QuizProvider = ({ children }) => {
+  //STAGE
   const [quizStage, setQuizStage] = useState(() => {
     const storedStage = localStorage.getItem('quizStage');
     return storedStage ? storedStage : 'EXIT'; // Default to 'EXIT' if no stage is stored
@@ -12,28 +13,40 @@ export const QuizProvider = ({ children }) => {
     localStorage.setItem('quizStage', quizStage);
   }, [quizStage]);
 
+  //LANGUAGE
   const [selectedLanguage, setSelectedLanguage] = useState('html'); // Default selected language is HTML
 
-  // Function to update quiz stage
-  const updateQuizStage = (newStage) => {
-    setQuizStage(newStage);
-  };
+  //SCORE
+  const [score, setScore] = useState(0); // State to store the score
 
+  //Function to update LANGUAGE
   const updateSelectedLanguage = (language) => {
     setSelectedLanguage(language);
   };
 
-  const handleExit = () => {
-    setQuizStage('EXIT');
-};
+  const handleLanguageChange = (e) => {
+    updateSelectedLanguage(e.target.value); // Update selected language
+  };
 
-const handleShowProgress = () => {
-    setQuizStage('PROGRESS');
-};
+   // Function to update STAGE
+   const updateQuizStage = (newStage) => {
+    setQuizStage(newStage);
+  };
 
-const handleRestartQuiz = () => {
+  //BUTTONS functionality
+  const handleStart = () => {
     setQuizStage('START');
-};
+  };
+  const handleGame = () => {
+    setQuizStage('GAME');
+  };
+  const handleEnd = () => {
+    setQuizStage('END');
+  };
+  const handleProgress = () => {
+    setQuizStage('PROGRESS');
+  };
+
 
   // Context value
   const contextValue = {
@@ -41,10 +54,14 @@ const handleRestartQuiz = () => {
     updateQuizStage,
     selectedLanguage,
     updateSelectedLanguage,
-    handleExit,
-    handleShowProgress,
-    handleRestartQuiz
-    };
+    handleLanguageChange,
+    handleStart,
+    handleGame,
+    handleEnd,
+    handleProgress,
+    score,
+    setScore,
+  };
 
   return (
     <QuizContext.Provider value={contextValue}>

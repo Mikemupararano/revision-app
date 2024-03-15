@@ -6,7 +6,7 @@ const Question = ({ question, currentQuestionIndex, handleAnswerClick, userAnswe
   return (
     <div className="question ml-sm-5 pl-sm-5 pt-2">
       <div className="py-2 h5 ">
-        <b>{question.language.toUpperCase()} Question</b>
+      <b>{question.language.toUpperCase()} Question</b>
       </div>
       <div className="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3" id="options">
         <div>{question.questionText}</div>

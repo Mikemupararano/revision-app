@@ -41,6 +41,9 @@ function Quiz() {
   return (
     <>
       {componentToRender}
+      {quizStage !== 'EXIT' && (
+        <button className="btn-exit" onClick={handleExit}>EXIT</button>
+      )}
     </>
   );
 }

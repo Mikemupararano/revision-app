@@ -1,27 +1,49 @@
-// QuizEnd.js
 import React, { useContext } from 'react';
 import { QuizContext } from './QuizContext';
 import './Quiz.css';
 
-function QuizEnd() {
-    const { handleExit, handleShowProgress, handleRestartQuiz, selectedLanguage } = useContext(QuizContext);
+function QuizEnd({ score, numberOfQuestions, selectedLanguage }) {
+    const { handleProgress, handleStart } = useContext(QuizContext);
 
     const handleFinishGame = () => {
         const quizResult = {
+            id: Date.now(), // Unique identifier for the quiz result
             selectedLanguage,
+            score,
+            numberOfQuestions, // Include the total number of questions
         };
-        localStorage.setItem('quizResult', JSON.stringify(quizResult));
-        handleShowProgress(); // Call handleShowProgress function from context
+        const storedResults = JSON.parse(localStorage.getItem('quizResults')) || [];
+        
+        // Check if there's already a stored result for the selected language
+        const existingResultIndex = storedResults.findIndex(result => result.selectedLanguage === selectedLanguage);
+        if (existingResultIndex !== -1) {
+            // Compare scores and update only if the new score is higher
+            if (score > storedResults[existingResultIndex].score) {
+                storedResults[existingResultIndex] = quizResult;
+                localStorage.setItem('quizResults', JSON.stringify(storedResults));
+            }
+        } else {
+            // No existing result for the selected language, save the new result
+            storedResults.push(quizResult);
+            localStorage.setItem('quizResults', JSON.stringify(storedResults));
+        }
+    
+        handleProgress(); // Call handleShowProgress function from context
     };
 
     return (
-        <div className="quiz-end">
-            <h1 className="text-danger">Quiz Finish !</h1>
-            <button className="btn-small text-black" onClick={handleFinishGame}>SAVE</button>
-            <button className="btn-small text-black" onClick={handleRestartQuiz}>PLAY AGAIN</button>
-            <button className="btn-small text-black" onClick={handleShowProgress}>PROGRESS</button>
-            <button className="btn-exit" onClick={handleExit}>EXIT</button>
-        </div>
+        <>
+            <div className="summary">
+                <h2>Quiz Summary</h2>
+                <p>Your score: {score} out of {numberOfQuestions}</p>
+            </div>
+            <div className="quiz-end">
+                <h1 className="text-danger">Quiz Finish !</h1>
+                <button className="btn-small text-black" onClick={handleFinishGame}>SAVE</button>
+                <button className="btn-small text-black" onClick={handleStart}>PLAY AGAIN</button>
+                <button className="btn-small text-black" onClick={handleProgress}>PROGRESS</button>
+            </div>
+        </>
     );
 }
 

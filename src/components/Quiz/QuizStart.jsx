@@ -4,15 +4,8 @@ import { QuizContext } from './QuizContext';
 import './Quiz.css';
 
 function QuizStart() {
-  const { updateQuizStage, updateSelectedLanguage } = useContext(QuizContext);
+  const { handleGame, handleLanguageChange } = useContext(QuizContext);
 
-  const handleStartQuiz = () => {
-    updateQuizStage('GAME'); // Change quiz stage to 'GAME' when Start Quiz button is clicked
-  };
-
-  const handleLanguageChange = (e) => {
-    updateSelectedLanguage(e.target.value); // Update selected language
-  };
 
   return (
     <div className="wrapper">
@@ -35,7 +28,7 @@ function QuizStart() {
           </select>
         </div>
         <div>
-          <button className="btn-small text-black" onClick={handleStartQuiz}>PLAY</button>
+          <button className="btn-small text-black" onClick={handleGame}>PLAY</button>
         </div>
       </div>
     </div>

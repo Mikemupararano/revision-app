@@ -3,7 +3,7 @@ import { QuizContext } from './QuizContext';
 import './Quiz.css';
 
 function Progress() {
-  const { onRestartQuiz, onExit } = useContext(QuizContext); // Access onRestartQuiz and onExit functions from context
+  const { onRestartQuiz, onExit } = useContext(QuizContext);  // Access onRestartQuiz and onExit functions from context
 
   // State to store scores and total questions for each language
   const [scores, setScores] = useState({
@@ -80,9 +80,8 @@ function Progress() {
 
       {/* Buttons to restart the quiz or exit */}
       <div className="progress-buttons">
-        <button className="btn-small text-black" onClick={onRestartQuiz}>PLAY AGAIN</button>
-        <button className="btn-exit" onClick={onExit}>Exit</button>
-      </div>
+      <button className="btn-small text-black" onClick={onRestartQuiz}>PLAY AGAIN</button>
+        <button className="btn-exit" onClick={onExit}>Exit</button>      </div>
     </div>
   );
 }
