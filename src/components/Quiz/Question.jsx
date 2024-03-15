@@ -1,12 +1,13 @@
 import React from 'react';
 
-const Question = ({ question, currentQuestionIndex, handleAnswerClick, userAnswers, handlePreviousButtonClick, handleNextButtonClick, isLastQuestion }) => {
+const Question = ({ question, currentQuestionIndex, handleAnswerClick, userAnswers, feedback, handlePreviousButtonClick, handleNextButtonClick, isLastQuestion }) => {
+  // Check if an answer has been selected for the current question
   const isAnswerSelected = userAnswers[currentQuestionIndex] !== null;
 
   return (
     <div className="question ml-sm-5 pl-sm-5 pt-2">
-      <div className="py-2 h5 ">
-      <h2>{question.language.toUpperCase()} Question {currentQuestionIndex} / 10</h2>
+      <div className="qLangAndNum py-2 h5 ">
+        <h2>{question.language.toUpperCase()} Question {currentQuestionIndex} / 10</h2>
       </div>
       <div className="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3" id="options">
         <div className="questionText">
