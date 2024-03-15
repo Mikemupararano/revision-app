@@ -8,7 +8,7 @@ function QuizExit() {
 
   return (
     <div className="quiz-exit">
-      <h1 className="text-danger">Welcome to the Quiz!</h1>
+      <h1 >Welcome to the Quiz!</h1>
       <p>Click the button below to start the quiz.</p>
       <button className="btn-small text-black" onClick={handleStart}>START QUIZ</button>
     </div>

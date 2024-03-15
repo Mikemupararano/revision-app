@@ -69,8 +69,7 @@ function QuizGame() {
     return (
         <>
             <div className="quiz-game">
-                <h1 className="text-danger">Game</h1>
-                <p>Chosen Language: {selectedLanguage}</p>
+                <h1>Game</h1>
                 <div className="container mt-sm-5 my-1">
                     {showSummary ? (
                         <QuizEnd

@@ -6,12 +6,12 @@ const Question = ({ question, currentQuestionIndex, handleAnswerClick, userAnswe
   return (
     <div className="question ml-sm-5 pl-sm-5 pt-2">
       <div className="py-2 h5 ">
-      <b>{question.language.toUpperCase()} Question</b>
+      <h2>{question.language.toUpperCase()} Question</h2>
       </div>
       <div className="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3" id="options">
-        <div>{question.questionText}</div>
+        <h1>{question.questionText}</h1>
         {question.answerOptions.map((option, index) => (
-          <label key={index} className="options" style={{ color: userAnswers[currentQuestionIndex] === option.answerText ? (option.isCorrect ? 'green' : 'red') : 'inherit' }}>
+          <label key={index} className="options" style={{ color: userAnswers[currentQuestionIndex] === option.answerText ? (option.isCorrect ? '#218575' : 'red') : 'inherit' }}>
             {option.answerText}
             <input
               type="radio"
@@ -24,7 +24,7 @@ const Question = ({ question, currentQuestionIndex, handleAnswerClick, userAnswe
           </label>
         ))}
       </div>
-      <div className="buttonsQ pt-3">
+      <div className="buttonQ pt-3">
         <div id="prev">
           <button className="btn-small text-black align-items-left" onClick={handlePreviousButtonClick} disabled={currentQuestionIndex === 0}>
             Previous
@@ -32,7 +32,7 @@ const Question = ({ question, currentQuestionIndex, handleAnswerClick, userAnswe
         </div>
         <div className="ml-auto mr-sm-5 align-items-right ">
           {isLastQuestion ? (
-            <button className="btn-exit text-black" onClick={handleNextButtonClick}>
+            <button className="btn-small text-black" onClick={handleNextButtonClick}>
               Finish
             </button>
           ) : (

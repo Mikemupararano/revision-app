@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+:root {
+    --main-color: #393536; 
+    --secondry-color: #218575;
+    --accent-color: #ff680a;
+  }
 
 * {
     margin: 0;
@@ -10,7 +15,7 @@ body{
     text-align: center;
 }
 .quiz-container {
-    background-color: #0f0f0f;
+    background-color: var(--main-color);
     text-align: center;
     padding: 50px;
     min-height: 600px;
@@ -18,10 +23,6 @@ body{
 }
 
 /*QUIZ*/
-
-.buttonsQ {
-    display: flex;
-}
 
 .btn-large {
     text-decoration: none;
@@ -75,7 +76,7 @@ body{
     width: 100px;
     text-decoration: none;
     background: linear-gradient(90deg,
-        rgba(222, 65, 65, 0.993) 70%,
+        var(--accent-color) 70%,
         rgba(26, 26, 26, 0.829) 120%);
     color: var(--color-dark);
     border-radius: 20px;
@@ -95,65 +96,69 @@ body{
 
 /*EXIT*/
 .quiz-exit{
-    background-color: black;
+    background-color: var(--main-color);
     color: white;
     text-align: center;
+    padding: 50px;
 }
+
+.quiz-exit h1{
+    color: var(--accent-color);
+    font-size: 44px;
+}
+
 /*START*/
+.start-screen {
+    background-color: var(--main-color);
+    text-align: center;
+    color: white;
+    padding: 50px;
+}
+
+.start-screen h1{
+    color: var(--accent-color);
+    font-size: 44px;
+}
+
+#languageText{
+    color: var(--secondry-color);
+}
 /*GAME*/
+.quiz-game {
+    background-color: var(--main-color);
+    text-align: center;
+    color: white;
+    padding: 50px;;
+}
+
+.quiz-game h1{
+    color: var(--accent-color);
+    font-size: 44px;
+}
+
 /*QUESTIONS*/
-/*END*/
-/*PROGRESS*/
-
-/*QuizStart */
-.wrapper {
-    background-color: #333;
-    text-align: center;
-    color: white;
-}
-
-.languageOptions {
-    margin: 10px;
-}
-
-#languageText {
-    margin: 5px;
-    font-size: 28px;
-}
-
-#language {
-    width: 200px;
-}
-
-/*QuizGame */
-.quiz-game,
-.quiz-end,
-.progress-container {
-    background-color: #0e0d0d;
-    text-align: center;
-    color: white;
-}
-
-.progress-item {
-    padding: 25px;
-}
 
 .container {
-    background-color: #555;
-    color: #ddd;
+    background-color: white;
+    color: var(--main-color);
     border-radius: 10px;
     padding: 20px;
     font-family: 'Montserrat', sans-serif;
     max-width: 700px;
 }
-
-.container>p {
-    font-size: 32px;
-}
-
 .question {
     width: 100%;
     text-align: center;
+}
+.question h1{
+    color: var(--accent-color);
+    font-size: 33px;
+}
+
+.question h2{
+    color: var(--secondry-color);
+    font-size: 22px;
+    font-weight: 800;
 }
 
 .questionBorder {
@@ -162,7 +167,6 @@ body{
     font-size: 33px;
     font-weight: 600;
 }
-
 .options {
     position: relative;
     padding-left: 40px;
@@ -186,7 +190,7 @@ body{
     left: 0;
     height: 25px;
     width: 25px;
-    background-color: #555;
+    background-color: var(--main-color);
     border: 1px solid #ddd;
     border-radius: 50%;
 }
@@ -210,7 +214,7 @@ body{
 }
 
 .options input[type="radio"]:checked~.checkmark {
-    background: #21bf73;
+    background: var(--secondry-color);
     transition: 300ms ease-in-out 0s;
 }
 
@@ -218,6 +222,68 @@ body{
     transform: translate(-50%, -50%) scale(1);
 }
 
+.buttonQ {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/*END*/
+.end-screen {
+    background-color: var(--main-color);
+    text-align: center;
+    color: white;
+    padding: 100px;;
+}
+
+.end-screen h1{
+    color: var(--accent-color);
+    font-size: 44px;
+}
+
+.summary{
+    background-color: white;
+    color: var(--main-color);
+    border-radius: 10px;
+}
+
+/*PROGRESS*/
+.progress-screen {
+    background-color: var(--main-color);
+    text-align: center;
+    color: white;
+    padding: 100px;;
+}
+
+.progress-screen h1{
+    color: var(--accent-color);
+    font-size: 44px;
+}
+/*QuizStart */
+
+
+.languageOptions {
+    margin: 10px;
+}
+
+#languageText {
+    margin: 5px;
+    font-size: 28px;
+}
+
+#language {
+    width: 200px;
+}
+
+/*QuizGame */
+
+.progress-item {
+    padding: 25px;
+}
+
+
+.container>p {
+    font-size: 32px;
+}
 
 @media(max-width:576px) {
     .question {

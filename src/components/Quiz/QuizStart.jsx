@@ -6,21 +6,16 @@ import './Quiz.css';
 function QuizStart() {
   const { handleGame, handleLanguageChange } = useContext(QuizContext);
 
-
   return (
-    <div className="wrapper">
-      <div id="start-screen" className="start">
+      <div id="start" className="start-screen">
         <div>
-          <h1 className="text-danger">Coding Quiz Challenge</h1>
+          <h1>Coding Quiz Challenge</h1>
           <p>
-            Try to answer the following code-related questions within the time limit.
-          </p>
-          <p>
-            Keep in mind that incorrect answers will penalize your score/time by ten seconds!
+            Try to answer the following code-related questions.
           </p>
         </div>
         <div className="languageOptions">
-          <label id="languageText" className="text-danger" htmlFor="language">Choose a language: </label>
+          <label id="languageText" htmlFor="language">Choose a language: </label>
           <select id="language" onChange={handleLanguageChange}>
             <option value="html">HTML</option>
             <option value="css">CSS</option>
@@ -31,7 +26,6 @@ function QuizStart() {
           <button className="btn-small text-black" onClick={handleGame}>PLAY</button>
         </div>
       </div>
-    </div>
   );
 }
 

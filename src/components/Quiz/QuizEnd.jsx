@@ -32,18 +32,17 @@ function QuizEnd({ score, numberOfQuestions, selectedLanguage }) {
     };
 
     return (
-        <>
+        <div className="end-screen">
             <div className="summary">
-                <h2>Quiz Summary</h2>
+                <h1>Quiz Summary</h1>
                 <p>Your score: {score} out of {numberOfQuestions}</p>
             </div>
             <div className="quiz-end">
-                <h1 className="text-danger">Quiz Finish !</h1>
                 <button className="btn-small text-black" onClick={handleFinishGame}>SAVE</button>
                 <button className="btn-small text-black" onClick={handleStart}>PLAY AGAIN</button>
                 <button className="btn-small text-black" onClick={handleProgress}>PROGRESS</button>
             </div>
-        </>
+        </div>
     );
 }
 
