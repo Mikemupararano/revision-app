@@ -7,11 +7,10 @@ function App() {
     <div>
       <h1>Hello Team!</h1>
       <Router>
-        <Routes> {/* Use Routes component to define routes */}
-          {/* Define routes using Route component */}
+        <Routes> 
           <Route path="/html" element={<Description searchTerm="HTML" />} />
           <Route path="/css" element={<Description searchTerm="CSS" />} />
-          {/* Add more routes for other pages */}
+          <Route path="/css" element={<Description searchTerm="JAVASCRIPT" />} />
         </Routes>
       </Router>
     </div>
