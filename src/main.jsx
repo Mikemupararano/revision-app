@@ -16,8 +16,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />
-    <CheatSheets /> {/* Render CheatSheets component here */}
+    <CheatSheets /> {/* Render CheatSheet*/}
   </React.StrictMode>
 );
 
-<CheatSheets/>
