@@ -160,7 +160,10 @@ body{
     font-size: 22px;
     font-weight: 800;
 }
-
+.questionText {
+    margin-bottom: 50px;
+    border-bottom: solid 2px var(--secondry-color);
+}
 .questionBorder {
     border-bottom: solid 1px rgb(247, 239, 239);
     margin: 20px;
