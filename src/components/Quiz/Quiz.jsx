@@ -4,6 +4,7 @@ import QuizGame from './QuizGame';
 import QuizEnd from './QuizEnd';
 import Progress from './Progress';
 import QuizExit from './QuizExit'; // Import the QuizExit component
+import ProgressBar from './ProgressBar'
 import { QuizContext } from './QuizContext';
 
 import './Quiz.css';
@@ -33,6 +34,9 @@ function Quiz() {
       break;
     case 'PROGRESS':
       componentToRender = <Progress />;
+      break;
+      case 'PROGRESSBAR':
+        componentToRender = <ProgressBar />;
       break;
     default:
       componentToRender = null;

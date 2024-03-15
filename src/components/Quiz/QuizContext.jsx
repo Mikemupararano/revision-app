@@ -46,7 +46,9 @@ export const QuizProvider = ({ children }) => {
   const handleProgress = () => {
     setQuizStage('PROGRESS');
   };
-
+  const handleProgressBar = () => {
+    setQuizStage('PROGRESSBAR');
+  };
 
   // Context value
   const contextValue = {
@@ -61,6 +63,7 @@ export const QuizProvider = ({ children }) => {
     handleProgress,
     score,
     setScore,
+    handleProgressBar,
   };
 
   return (
