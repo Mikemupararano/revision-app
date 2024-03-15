@@ -1,7 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { QuizContext } from './QuizContext';
 import './Quiz.css';
 
-function Progress({ onRestartQuiz, onExit }) {
+function Progress() {
+  const { onRestartQuiz, onExit } = useContext(QuizContext); // Access onRestartQuiz and onExit functions from context
+
   // State to store scores and total questions for each language
   const [scores, setScores] = useState({
     html: { score: 0, totalQuestions: 0 },
@@ -80,7 +83,7 @@ function Progress({ onRestartQuiz, onExit }) {
         <button className="btn-small text-black" onClick={onRestartQuiz}>PLAY AGAIN</button>
         <button className="btn-exit" onClick={onExit}>Exit</button>
       </div>
-      </div>
+    </div>
   );
 }
 

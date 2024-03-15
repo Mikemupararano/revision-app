@@ -1,14 +1,19 @@
-import React, { useState } from 'react';
+// QuizGame.js
+import React, { useContext, useState } from 'react';
+import { QuizContext } from './QuizContext';
 import './Quiz.css';
 import questions from '../../data/quiz.json';
 import Question from './Question';
 
-function QuizGame({ onFinish, onExit, selectedLanguage }) {
+function QuizGame({ onFinish, onExit }) {
+    const { updateQuizStage } = useContext(QuizContext); // Access updateQuizStage function from context
+    const { selectedLanguage } = useContext(QuizContext); // Access selectedLanguage from context
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [userAnswers, setUserAnswers] = useState(Array(questions.length).fill(null));
     const [answerFeedback, setAnswerFeedback] = useState('');
     const [showSummary, setShowSummary] = useState(false);
 
+    // Filter questions based on selectedLanguage
     const filteredQuestions = questions.filter(question => selectedLanguage === 'all' || question.language === selectedLanguage);
 
     const handleAnswerClick = (selectedOption) => {
@@ -45,15 +50,13 @@ function QuizGame({ onFinish, onExit, selectedLanguage }) {
     };
 
     const handleExit = () => {
-        onExit();
+      updateQuizStage('START'); // Transition to the 'END' stage
+      onExit(); // Optionally, perform any additional cleanup or actions
     };
 
     const handleFinish = () => {
-        onFinish();
-        setCurrentQuestionIndex(0);
-        setUserAnswers(Array(questions.length).fill(null));
-        setShowSummary(false);
-    };
+      updateQuizStage('END'); // Transition to the 'END' stage
+  };
 
     const calculateScore = () => {
         let score = 0;

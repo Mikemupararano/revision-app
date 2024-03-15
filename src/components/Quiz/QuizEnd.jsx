@@ -1,23 +1,26 @@
 // QuizEnd.js
-import React from 'react';
+import React, { useContext } from 'react';
+import { QuizContext } from './QuizContext';
 import './Quiz.css';
 
-function QuizEnd({ onExit, onShowProgress, onRestartQuiz, selectedLanguage}) {
+function QuizEnd() {
+    const { handleExit, handleShowProgress, handleRestartQuiz, selectedLanguage } = useContext(QuizContext);
+
     const handleFinishGame = () => {
         const quizResult = {
             selectedLanguage,
         };
         localStorage.setItem('quizResult', JSON.stringify(quizResult));
-        onShowProgress(); // Call onShowProgress function passed as prop
+        handleShowProgress(); // Call handleShowProgress function from context
     };
 
     return (
         <div className="quiz-end">
             <h1 className="text-danger">Quiz Finish !</h1>
             <button className="btn-small text-black" onClick={handleFinishGame}>SAVE</button>
-            <button className="btn-small text-black" onClick={onRestartQuiz}>PLAY AGAIN</button>
-            <button className="btn-small text-black" onClick={onShowProgress}>PROGRESS</button>
-            <button className="btn-exit" onClick={onExit}>EXIT</button>
+            <button className="btn-small text-black" onClick={handleRestartQuiz}>PLAY AGAIN</button>
+            <button className="btn-small text-black" onClick={handleShowProgress}>PROGRESS</button>
+            <button className="btn-exit" onClick={handleExit}>EXIT</button>
         </div>
     );
 }

@@ -1,68 +1,46 @@
-// Quiz.js
-import React, { useState } from 'react';
-import './Quiz.css';
+import React, { useContext } from 'react';
 import QuizStart from './QuizStart';
 import QuizGame from './QuizGame';
 import QuizEnd from './QuizEnd';
 import Progress from './Progress';
+import QuizExit from './QuizExit'; // Import the QuizExit component
+import { QuizContext } from './QuizContext';
+
+import './Quiz.css';
 
 function Quiz() {
-  const [showStart, setShowStart] = useState(false);
-  const [showGame, setShowGame] = useState(false);
-  const [showEnd, setShowEnd] = useState(false);
-  const [showProgress, setShowProgress] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState('html');
-  const [showButton, setShowButton ] = useState(true);
+  const { quizStage, updateQuizStage } = useContext(QuizContext); // Accessing context
 
-
-  const handleWelcome = () => {
-    setShowButton(false);
-    setShowStart(true);
-    setShowGame(false);
-    setShowEnd(false);
-    setShowProgress(false);
-  };
-  
-  const handleStartQuiz = (language) => {
-    setSelectedLanguage(language);
-    setShowStart(false);
-    setShowGame(true);
-    setShowEnd(false);
-    setShowProgress(false);
+  // Function to handle exit and set quiz stage to 'EXIT'
+  const handleExit = () => {
+    updateQuizStage('EXIT');
   };
 
-  const handleFinishGame = () => {
-    setShowStart(false);
-    setShowGame(false);
-    setShowEnd(true);
-    setShowProgress(false);
-  };
-
-  const handleShowProgress = () => {
-    setShowStart(false);
-    setShowGame(false);
-    setShowEnd(false);
-    setShowProgress(true);
-  };
-
-  const handleRestartQuiz = (language) => {
-    setSelectedLanguage(language);
-    setShowStart(true);
-    setShowGame(false);
-    setShowEnd(false);
-    setShowProgress(false);
-  };
+  // Render components based on quiz stage
+  let componentToRender;
+  switch (quizStage) {
+    case 'EXIT':
+      componentToRender = <QuizExit />;
+      break;
+    case 'START':
+      componentToRender = <QuizStart />;
+      break;
+    case 'GAME':
+      componentToRender = <QuizGame />;
+      break;
+    case 'END':
+      componentToRender = <QuizEnd />;
+      break;
+    case 'PROGRESS':
+      componentToRender = <Progress />;
+      break;
+    default:
+      componentToRender = null;
+  }
 
   return (
     <>
-      
-      <div className="quiz-container">
-      {showButton ? <button className="btn-large" onClick={handleWelcome}>START QUIZ</button> : <></>}
-        {showStart && <QuizStart onPlay={handleStartQuiz} />}
-        {showGame && <QuizGame onFinish={handleFinishGame} onExit={handleWelcome} selectedLanguage={selectedLanguage} />}
-        {showEnd && <QuizEnd onExit={handleWelcome} onShowProgress={handleShowProgress} onRestartQuiz={handleRestartQuiz} selectedLanguage={selectedLanguage} />}
-        {showProgress && <Progress onRestartQuiz={handleRestartQuiz} onExit={handleWelcome} onShowProgress={handleShowProgress} />}
-      </div>
+      {componentToRender}
     </>
   );
 }
