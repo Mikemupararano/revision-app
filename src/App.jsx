@@ -12,7 +12,7 @@ function App() {
       <QuizProvider>
         <Quiz />
       </QuizProvider>
-      <Toaster />
+      <Toaster position="top-left" reverseOrder={false}/>
     </>
   );
 }

@@ -30,11 +30,19 @@ function QuizGame() {
         if (selectedOption === filteredQuestions[currentQuestionIndex].answerOptions[correctAnswerIndex].answerText) {
             // If the selected option is correct, set the answer feedback to 'Correct!'
             setAnswerFeedback('Correct!');
-            toast.success('Well done! Your answer is correct.');
+            toast.success('Well done! Your answer is correct.', {
+                icon: '👏', style: {
+                    border: '5px solid rgb(255, 174, 0)',
+                  },
+                })
         } else {
             // If the selected option is incorrect, set the answer feedback to 'Wrong!'
             setAnswerFeedback('Wrong!');
-            toast.error('Oops! Wrong answer.');
+            toast.error('Oops! Wrong answer.', {
+                style: {
+                  border: '5px solid red',
+                },
+              });
         }
     };
 
