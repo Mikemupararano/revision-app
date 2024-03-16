@@ -12,11 +12,11 @@ function CheatSheets() {
     return (
         <div>
             <Document file={pdf} onLoadSuccess={onDocumentLoadSuccess}>
-                {Array.map(null, Array(numPages))
+                {Array.apply(null, Array(numPages))
                 .map((x, i) => i + 1)
                 .map((page) => {
                 <Page 
-                pageNumber={pageNumber} 
+                pageNumber={page} 
                 renderTexlayer={false} 
                 renderAnnotationLayer={false} 
                 />;
