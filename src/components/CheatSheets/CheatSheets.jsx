@@ -10,11 +10,15 @@ function CheatSheets() {
     }
 
     return (
-        <div>
+        <div className="CheatSheet-div">
+            <p>
+                Page {pageNumber} of {numPages}
+                </p>
             <Document file={pdf} onLoadSuccess={onDocumentLoadSuccess}>
                 {Array.apply(null, Array(numPages))
                 .map((x, i) => i + 1)
-                .map((page) => {return(
+                .map((page) => {
+                    return(
                 <Page 
                 pageNumber={page} 
                 renderTexlayer={false} 
@@ -23,9 +27,8 @@ function CheatSheets() {
                 )
                 })}
             </Document>
-            <p>
-                Page {pageNumber} of {numPages}
-            </p>
+            
+            
         </div>
     );
 }
