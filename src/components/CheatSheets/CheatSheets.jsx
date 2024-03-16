@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Document, Page } from 'react-pdf';
 import pdf from './Javascript.pdf'
-function CheatSheets() {
+function CheatSheets(props) {
     const [numPages, setNumPages] = useState();
     const [pageNumber, setPageNumber] = useState(1);
 
@@ -14,7 +14,7 @@ function CheatSheets() {
             <p>
                 Page {pageNumber} of {numPages}
                 </p>
-            <Document file={pdf} onLoadSuccess={onDocumentLoadSuccess}>
+            <Document file={props.pdfFile} onLoadSuccess={onDocumentLoadSuccess}>
                 {Array.apply(null, Array(numPages))
                 .map((x, i) => i + 1)
                 .map((page) => {

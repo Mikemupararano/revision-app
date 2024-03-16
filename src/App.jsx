@@ -9,6 +9,8 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 ).toString();
 
 function App() {
+const[pdffile, setPdFile] = useState(null);
+
   return (
     <div>
       <h1>Hello Team!</h1>
@@ -17,4 +19,10 @@ function App() {
   );
 }
 
+const showPDF = (pdf)=> {
+  window.open('http://localhost:5174/files/${pdf}', "_blank", "noreferrer");
+  setPdffile('http://localhost:5174/files/${pdf}')
+};
+
+<CheatSheets pdfFile={pdfFfile}/>
 export default App;
