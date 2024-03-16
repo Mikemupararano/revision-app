@@ -31,9 +31,9 @@ const YourComponent = () => {
   }, []);
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
+    <div className="probar" style={{ display: 'flex', justifyContent: 'space-evenly' }}>
       {Object.keys(scores).map((language, index) => (
-        <div key={language} style={{ marginBottom: '20px' }}>
+        <div key={language} style={{ marginBottom: '20px'}}>
           <h3>{language.toUpperCase()}</h3>
           <div style={{ width: 200 }}>
             <CircularProgressbar
