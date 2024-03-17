@@ -31,6 +31,7 @@ function Navbar() {
           <Link to="/javascript">JavaScript</Link>
           <Link to="/codesection">Code Snipet</Link>
           <Link to="/cheatsheets">Cheat Sheets</Link>
+          <Link to="/quiz">QUIZ</Link>
           {/* Add more navbar links as needed */}
         </div>
       </nav>
