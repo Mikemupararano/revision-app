@@ -12,10 +12,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@codemirror/lang-javascript": "^6.2.2",
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "@codemirror/lang-javascript": "^6.2.2",
     "@popperjs/core": "^2.11.8",
     "@uiw/react-codemirror": "^4.21.24",
     "bootstrap": "^5.3.3",
