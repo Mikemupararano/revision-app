@@ -1,0 +1,692 @@
+[
+    {
+        "qId": "css1",
+        "language": "css",
+        "questionText": "What does CSS stand for?",
+        "answerOptions": [
+            {
+                "answerText": "Cascading Style Sheets",
+                "isCorrect": true
+            },
+            {
+                "answerText": "Computer Style Sheets",
+                "isCorrect": false
+            },
+            {
+                "answerText": "Creative Style Sheets",
+                "isCorrect": false
+            },
+            {
+                "answerText": "Colorful Style Sheets",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "qId": "css2",
+        "language": "css",
+        "questionText": "Which CSS property is used to change the text color of an element?",
+        "answerOptions": [
+            {
+                "answerText": "color",
+                "isCorrect": true
+            },
+            {
+                "answerText": "text-color",
+                "isCorrect": false
+            },
+            {
+                "answerText": "font-color",
+                "isCorrect": false
+            },
+            {
+                "answerText": "background-color",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "qId": "css3",
+        "language": "css",
+        "questionText": "What does the 'box-sizing' property in CSS control?",
+        "answerOptions": [
+            {
+                "answerText": "The size of a box",
+                "isCorrect": false
+            },
+            {
+                "answerText": "The positioning of a box",
+                "isCorrect": false
+            },
+            {
+                "answerText": "The content-box model",
+                "isCorrect": false
+            },
+            {
+                "answerText": "How the total width and height of an element is calculated",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "qId": "css4",
+        "language": "css",
+        "questionText": "Which CSS selector is used to select all elements with a specific class?",
+        "answerOptions": [
+            {
+                "answerText": ".class",
+                "isCorrect": true
+            },
+            {
+                "answerText": "#id",
+                "isCorrect": false
+            },
+            {
+                "answerText": "element",
+                "isCorrect": false
+            },
+            {
+                "answerText": "* (asterisk)",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "qId": "css5",
+        "language": "css",
+        "questionText": "In CSS, what does the 'float' property do?",
+        "answerOptions": [
+            {
+                "answerText": "Aligns text to the left or right within a container",
+                "isCorrect": true
+            },
+            {
+                "answerText": "Creates a border around an element",
+                "isCorrect": false
+            },
+            {
+                "answerText": "Changes the font style",
+                "isCorrect": false
+            },
+            {
+                "answerText": "Adds spacing between lines of text",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "qId": "css6",
+        "language": "css",
+        "questionText": "What is the purpose of the CSS 'z-index' property?",
+        "answerOptions": [
+            {
+                "answerText": "Changes the color of an element",
+                "isCorrect": false
+            },
+            {
+                "answerText": "Defines the stacking order of positioned elements",
+                "isCorrect": true
+            },
+            {
+                "answerText": "Specifies the font size",
+                "isCorrect": false
+            },
+            {
+                "answerText": "Sets the opacity of an element",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "qId": "css7",
+        "language": "css",
+        "questionText": "Which CSS property is used to add rounded corners to an element?",
+        "answerOptions": [
+            {
+                "answerText": "border-radius",
+                "isCorrect": true
+            },
+            {
+                "answerText": "corner-radius",
+                "isCorrect": false
+            },
+            {
+                "answerText": "rounded-corners",
+                "isCorrect": false
+            },
+            {
+                "answerText": "curve",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "qId": "css8",
+        "language": "css",
+        "questionText": "In CSS, what does the 'display: flex' property do?",
+        "answerOptions": [
+            {
+                "answerText": "Displays an element as a block-level flex container",
+                "isCorrect": false
+            },
+            {
+                "answerText": "Displays an element as an inline-level flex container",
+                "isCorrect": false
+            },
+            {
+                "answerText": "Displays an element as a block-level flex item",
+                "isCorrect": false
+            },
+            {
+                "answerText": "Establishes a flex container and enables flex properties",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "qId": "css9",
+        "language": "css",
+        "questionText": "Which CSS property is used to control the space between elements?",
+        "answerOptions": [
+            {
+                "answerText": "margin",
+                "isCorrect": true
+            },
+            {
+                "answerText": "padding",
+                "isCorrect": false
+            },
+            {
+                "answerText": "spacing",
+                "isCorrect": false
+            },
+            {
+                "answerText": "border-spacing",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "qId": "css10",
+        "language": "css",
+        "questionText": "What does the 'media query' in CSS allow you to do?",
+        "answerOptions": [
+            {
+                "answerText": "Change the font style",
+                "isCorrect": false
+            },
+            {
+                "answerText": "Apply styles based on the characteristics of the device",
+                "isCorrect": true
+            },
+            {
+                "answerText": "Create a hyperlink",
+                "isCorrect": false
+            },
+            {
+                "answerText": "Define the structure of a webpage",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "qId": "html1",
+        "language": "html",
+        "questionText": "What does HTML stand for?",
+        "answerOptions": [
+            {
+                "answerText": "Hypertext Markup Language",
+                "isCorrect": true
+            },
+            {
+                "answerText": "Hyper Transfer Markup Language",
+                "isCorrect": false
+            },
+            {
+                "answerText": "High-level Text Markup Language",
+                "isCorrect": false
+            },
+            {
+                "answerText": "Home Tool Markup Language",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "qId": "html2",
+        "language": "html",
+        "questionText": "Which HTML tag is used for creating an ordered list?",
+        "answerOptions": [
+            {
+                "answerText": "<ul>",
+                "isCorrect": false
+            },
+            {
+                "answerText": "<li>",
+                "isCorrect": false
+            },
+            {
+                "answerText": "<ol>",
+                "isCorrect": true
+            },
+            {
+                "answerText": "<dl>",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "qId": "html3",
+        "language": "html",
+        "questionText": "What is the purpose of the HTML <head> tag?",
+        "answerOptions": [
+            {
+                "answerText": "To define the main content of the HTML document",
+                "isCorrect": false
+            },
+            {
+                "answerText": "To specify metadata about the HTML document",
+                "isCorrect": true
+            },
+            {
+                "answerText": "To create a hyperlink",
+                "isCorrect": false
+            },
+            {
+                "answerText": "To define a section in an HTML document",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "qId": "html4",
+        "language": "html",
+        "questionText": "Which HTML tag is used to create a hyperlink?",
+        "answerOptions": [
+            {
+                "answerText": "<a>",
+                "isCorrect": true
+            },
+            {
+                "answerText": "<link>",
+                "isCorrect": false
+            },
+            {
+                "answerText": "<href>",
+                "isCorrect": false
+            },
+            {
+                "answerText": "<hyperlink>",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "qId": "html5",
+        "language": "html",
+        "questionText": "In HTML, what does the acronym 'CSS' stand for?",
+        "answerOptions": [
+            {
+                "answerText": "Computer Style Sheets",
+                "isCorrect": false
+            },
+            {
+                "answerText": "Cascading Style Sheets",
+                "isCorrect": true
+            },
+            {
+                "answerText": "Creative Style Sheets",
+                "isCorrect": false
+            },
+            {
+                "answerText": "Colorful Style Sheets",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "qId": "html6",
+        "language": "html",
+        "questionText": "Which HTML tag is used for creating a table?",
+        "answerOptions": [
+            {
+                "answerText": "<tr>",
+                "isCorrect": false
+            },
+            {
+                "answerText": "<table>",
+                "isCorrect": true
+            },
+            {
+                "answerText": "<td>",
+                "isCorrect": false
+            },
+            {
+                "answerText": "<th>",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "qId": "html7",
+        "language": "html",
+        "questionText": "What is the purpose of the HTML <em> tag?",
+        "answerOptions": [
+            {
+                "answerText": "To define a paragraph",
+                "isCorrect": false
+            },
+            {
+                "answerText": "To emphasize text",
+                "isCorrect": true
+            },
+            {
+                "answerText": "To create a line break",
+                "isCorrect": false
+            },
+            {
+                "answerText": "To define an image",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "qId": "html8",
+        "language": "html",
+        "questionText": "Which attribute is used to provide additional information about an element in HTML?",
+        "answerOptions": [
+            {
+                "answerText": "class",
+                "isCorrect": false
+            },
+            {
+                "answerText": "id",
+                "isCorrect": false
+            },
+            {
+                "answerText": "src",
+                "isCorrect": false
+            },
+            {
+                "answerText": "title",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "qId": "html9",
+        "language": "html",
+        "questionText": "In HTML, what is the purpose of the <img> tag?",
+        "answerOptions": [
+            {
+                "answerText": "To create a hyperlink",
+                "isCorrect": false
+            },
+            {
+                "answerText": "To embed audio",
+                "isCorrect": false
+            },
+            {
+                "answerText": "To display an image",
+                "isCorrect": true
+            },
+            {
+                "answerText": "To define a table",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "qId": "html10",
+        "language": "html",
+        "questionText": "Which HTML tag is used for creating a form?",
+        "answerOptions": [
+            {
+                "answerText": "<input>",
+                "isCorrect": false
+            },
+            {
+                "answerText": "<form>",
+                "isCorrect": true
+            },
+            {
+                "answerText": "<button>",
+                "isCorrect": false
+            },
+            {
+                "answerText": "<select>",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "qId": "js1",
+        "language": "js",
+        "questionText": "What does 'JS' stand for?",
+        "answerOptions": [
+            {
+                "answerText": "Java Style",
+                "isCorrect": false
+            },
+            {
+                "answerText": "JavaScript",
+                "isCorrect": true
+            },
+            {
+                "answerText": "Just Style",
+                "isCorrect": false
+            },
+            {
+                "answerText": "Jumpy Strings",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "qId": "js2",
+        "language": "js",
+        "questionText": "Which keyword is used to declare a variable in JavaScript?",
+        "answerOptions": [
+            {
+                "answerText": "var",
+                "isCorrect": true
+            },
+            {
+                "answerText": "let",
+                "isCorrect": false
+            },
+            {
+                "answerText": "const",
+                "isCorrect": false
+            },
+            {
+                "answerText": "variable",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "qId": "js3",
+        "language": "js",
+        "questionText": "What is the purpose of the 'typeof' operator in JavaScript?",
+        "answerOptions": [
+            {
+                "answerText": "To check if a variable is defined",
+                "isCorrect": false
+            },
+            {
+                "answerText": "To determine the data type of a variable",
+                "isCorrect": true
+            },
+            {
+                "answerText": "To convert a string to uppercase",
+                "isCorrect": false
+            },
+            {
+                "answerText": "To declare a new variable",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "qId": "js4",
+        "language": "js",
+        "questionText": "Which built-in method in JavaScript is used to sort an array?",
+        "answerOptions": [
+            {
+                "answerText": "sort()",
+                "isCorrect": true
+            },
+            {
+                "answerText": "order()",
+                "isCorrect": false
+            },
+            {
+                "answerText": "arrange()",
+                "isCorrect": false
+            },
+            {
+                "answerText": "organize()",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "qId": "js5",
+        "language": "js",
+        "questionText": "What is the purpose of the 'addEventListener' method in JavaScript?",
+        "answerOptions": [
+            {
+                "answerText": "To add a new element to the DOM",
+                "isCorrect": false
+            },
+            {
+                "answerText": "To attach an event handler to an element",
+                "isCorrect": true
+            },
+            {
+                "answerText": "To create a function",
+                "isCorrect": false
+            },
+            {
+                "answerText": "To define a variable",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "qId": "js6",
+        "language": "js",
+        "questionText": "Which operator is used for strict equality comparison in JavaScript?",
+        "answerOptions": [
+            {
+                "answerText": "==",
+                "isCorrect": false
+            },
+            {
+                "answerText": "===",
+                "isCorrect": true
+            },
+            {
+                "answerText": "!=",
+                "isCorrect": false
+            },
+            {
+                "answerText": "!==",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "qId": "js7",
+        "language": "js",
+        "questionText": "What is the purpose of the 'setTimeout' function in JavaScript?",
+        "answerOptions": [
+            {
+                "answerText": "To repeat a function at regular intervals",
+                "isCorrect": false
+            },
+            {
+                "answerText": "To delay the execution of a function",
+                "isCorrect": true
+            },
+            {
+                "answerText": "To add a new element to the DOM",
+                "isCorrect": false
+            },
+            {
+                "answerText": "To remove an element from the DOM",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "qId": "js8",
+        "language": "js",
+        "questionText": "What is the purpose of the 'push' method in JavaScript?",
+        "answerOptions": [
+            {
+                "answerText": "To remove the last element from an array",
+                "isCorrect": false
+            },
+            {
+                "answerText": "To add a new element to the beginning of an array",
+                "isCorrect": false
+            },
+            {
+                "answerText": "To add a new element to the end of an array",
+                "isCorrect": true
+            },
+            {
+                "answerText": "To reverse the order of elements in an array",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "qId": "js9",
+        "language": "js",
+        "questionText": "What is the result of the expression '3 + '3' in JavaScript?",
+        "answerOptions": [
+            {
+                "answerText": "33",
+                "isCorrect": true
+            },
+            {
+                "answerText": "6",
+                "isCorrect": false
+            },
+            {
+                "answerText": "9",
+                "isCorrect": false
+            },
+            {
+                "answerText": "Error",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "qId": "js10",
+        "language": "js",
+        "questionText": "Which keyword is used to break out of a loop in JavaScript?",
+        "answerOptions": [
+            {
+                "answerText": "continue",
+                "isCorrect": false
+            },
+            {
+                "answerText": "exit",
+                "isCorrect": false
+            },
+            {
+                "answerText": "stop",
+                "isCorrect": false
+            },
+            {
+                "answerText": "break",
+                "isCorrect": true
+            }
+        ]
+    }
+]
