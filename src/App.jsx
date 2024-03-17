@@ -10,7 +10,7 @@ function App() {
         <Routes> 
           <Route path="/html" element={<Description searchTerm="HTML" />} />
           <Route path="/css" element={<Description searchTerm="CSS" />} />
-          <Route path="/css" element={<Description searchTerm="JAVASCRIPT" />} />
+          <Route path="/javascript" element={<Description searchTerm="JavaScript" />} />
         </Routes>
       </Router>
     </div>
