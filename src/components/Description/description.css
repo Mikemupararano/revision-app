@@ -1,8 +1,9 @@
+:root {
+    --main-color: #393536;
+    --secondry-color: #218575;
+    --accent-color: #FF680A;
+  }
 
-.h2 {
-    color: red;
-}
-
-.p {
-  color:  #393536;
-}
+  .p {
+    colour: #FF680A;
+  }
