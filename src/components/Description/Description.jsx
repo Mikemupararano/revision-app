@@ -21,7 +21,7 @@ const Description = ({ searchTerm }) => {
 
   return (
     <div>
-      <h2>{searchTerm}</h2>
+      <h2>What is {searchTerm}?</h2>
       <p>{description}</p>
     </div>
   );
