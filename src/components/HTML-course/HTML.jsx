@@ -1,6 +1,7 @@
 import React from 'react'
+import './HTML.css'
 
-const Button = () => {
+const HTML = () => {
   return (
     <div>
       
@@ -8,4 +9,4 @@ const Button = () => {
   )
 }
 
-export default Button
+export default HTML

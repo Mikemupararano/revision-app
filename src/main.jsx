@@ -1,12 +1,10 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import * as bootstrap from 'bootstrap'
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import App from './App';
+import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary';
 
-
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+createRoot(document.getElementById('root')).render(
+  <ErrorBoundary>
     <App />
-  </React.StrictMode>,
-)
+  </ErrorBoundary>
+);

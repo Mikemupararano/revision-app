@@ -1,0 +1,118 @@
+:root {
+  --font-size: 45px;
+  --font-weight: 600;
+  --font-right-side: 25px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container-fluid {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end; /* Align items to the right */
+  align-items: center;
+  gap: 20px; /* Add gap between items */
+}
+
+.navbar {
+  margin: 0; /* Remove default margin */
+  width: 100vw; /* Set width to 100% of viewport width */
+  height: 100px;
+  background-color: #780000;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between; /* Evenly distribute left and right sides */
+  align-items: center; /* Center vertically */
+  padding: 0; /* Add padding for better spacing */
+}
+
+.logo {
+  display: flex;
+  position: relative;
+  top: 1px;
+  max-width: 200px;
+  height: 90px;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.leftSide {
+  display: flex;
+  align-items: center;
+}
+
+.leftSide h1 {
+  margin: 0; /* Remove default margin */
+  color: white; /* Set text color */
+  font-size: var(--font-size); /* Adjust font size */
+  font-weight: var(--font-weight);
+}
+
+.rightSide {
+  display: flex;
+  align-items: center;
+  flex-grow: 1; /* Add this to make the right side take up remaining space */
+  justify-content: center; /* Center the items horizontally */
+}
+
+.rightSide a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px; /* Adjust margin as needed */
+  font-size: var(--font-right-side); /* Adjust font size */
+  font-weight: var(--font-weight);
+}
+
+.container-fluid {
+  display: flex;
+  align-items: center;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-left: 20px; /* Add left margin for spacing between button and links */
+}
+
+@media only screen and (max-width: 830px) {
+  .navbar {
+    flex-direction: column; /* Adjust flex direction to stack elements vertically */
+    align-items: flex-start; /* Align items to the start of the container */
+    padding: 20px; /* Add padding for better spacing */
+  }
+
+  .rightSide {
+    flex-grow: 0; /* Reset flex-grow */
+    justify-content: flex-start; /* Align items to the start on smaller screens */
+  }
+
+  .rightSide a {
+    display: block; /* Display links as block elements */
+    margin: 0; /* Reset margin */
+    font-size: var(--font-right-side); /* Adjust font size */
+    font-weight: var(--font-weight);
+    margin-bottom: 11px; /* Add margin between links */
+  }
+
+  .rightSide button {
+    padding: 10px;
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .leftSide h1 {
+    font-size: 20px; /* Adjust font size for smaller screens */
+  }
+
+  .rightSide button {
+    margin-left: 0; /* Remove left margin for button on smaller screens */
+  }
+}
