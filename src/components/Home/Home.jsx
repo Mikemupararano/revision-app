@@ -7,9 +7,7 @@ function HomePage() {
       <div className="headerContainer">
         {/* <img src={group8} alt="group 8 photo." /> */}
         <p className="home-description lead">CodeCraft: Elevating Your Coding Mastery Tenfold!</p>
-        
-              </div>
-      
+      </div>
     </div>
   );
 }

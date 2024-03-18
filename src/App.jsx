@@ -1,31 +1,30 @@
+// App.jsx
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
+import Home from './components/Home/Home';
 import About from './components/About/About';
-import Footer from './components/Footer/Footer';
-import { HashRouter as Router, Route, Routes } from 'react-router-dom';
-import HomePage from './components/Home/Home';
-import CodeSection from './components/CodeSection/CodeSection'
-import Quiz from './components/Quiz/Quiz';
-import { QuizProvider } from './components/Quiz/QuizContext';
-
+import ModulePage from './components/ModulePage/ModulePage';
+import Quiz from './components/Quiz/Quiz'; // Import the Quiz component
+import { QuizProvider } from './components/Quiz/QuizContext'; // Import the QuizProvider
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   return (
-    <div className="App">
-      <Router>
-        <Navbar /> {/* Navbar with logo */}
+    <Router>
+      <div className="App">
+        <Navbar />
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<About />} /> 
-           <Route path="/code" element={<CodeSection/>} />
-             <Route path="quiz" element={<QuizProvider/>} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/module" element={<ModulePage />} />
+          {/* Route for the Quiz component */}
+          <Route path="/module/quiz" element={<QuizProvider><Quiz /></QuizProvider>} />
         </Routes>
-        <Footer />
-      </Router>
-    </div>
+        <Toaster position="top-left" reverseOrder={false} />
+      </div>
+    </Router>
   );
 }
+
 export default App;
-
-

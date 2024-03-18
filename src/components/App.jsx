@@ -11,6 +11,7 @@ import JavaScript from './JavaScript/JavaScript';
 import CodeSection from './CodeSection/CodeSection';
 import Quiz from './Quiz/Quiz';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import  '../App.css'
 
 function App() {
   return (

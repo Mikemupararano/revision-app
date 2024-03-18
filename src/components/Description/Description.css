@@ -1,0 +1,9 @@
+:root {
+    --main-color: #393536;
+    --secondry-color: #218575;
+    --accent-color: #FF680A;
+  }
+
+  p {
+    color: #FF680A;
+  }

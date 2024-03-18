@@ -1,178 +1,80 @@
+/* ModulePage.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+:root {
+    --main-color: #393536; 
+    --secondry-color: #218575;
+    --accent-color: #ff680a;
+  }
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Reem Kufi", sans-serif !important;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-img {
-  max-width: 100%;
-  height: auto;
+
+.container-module {
+    margin-top: 100px;
+    background-color: white;
+    text-align: center;
+    padding: 50px;
+    min-height: 600px;
+    justify-content: center;
 }
-.App {
-  min-height: 100vh;
-  width: 85vw;
-  max-width: 1900px;
-  margin: 0rem auto;
+
+.description-section {
+  background-color: white; /* Light gray background for description section */
+  border: 5px solid var(--main-color); /* Add a 1px solid border with light gray color */
+  padding: 20px; /* Add some padding for better spacing */
+  margin: 10px;
+  min-height: 200px;
 }
-body {
-  max-width: 100%;
-  overflow-x: hidden;
-  background-color: #f6f6f6;
+
+.progressbar-section {
+  background-color: white; /* Light gray background for description section */
+  border: 5px solid var(--accent-color); /* Add a 1px solid border with light gray color */
+  padding: 20px; /* Add some padding for better spacing */
+  margin: 10px;
+  min-height: 200px;
 }
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 90px;
+
+.codesnippet-section{
+  background-color: white; /* Light gray background for description section */
+  border: 5px solid var(--secondry-color); /* Add a 1px solid border with light gray color */
+  padding: 20px; /* Add some padding for better spacing */
+  margin: 10px;
+  min-height: 200px;
 }
-.navbar-menu-container {
-  display: none;
+
+.tutorial-section {
+  background-color: white; /* Light gray background for description section */
+  border: 5px solid var(--main-color); /* Add a 1px solid border with light gray color */
+  padding: 20px; /* Add some padding for better spacing */
+  margin: 10px;
 }
-.navbar-links-container a {
-  margin-right: 3rem;
-  text-decoration: none;
-  color: black;
-  font-size: 1.1rem;
-  font-weight: 600;
+
+.cheatsheet-section {
+  background-color: white; /* Light gray background for description section */
+  border: 5px solid var(--accent-color); /* Add a 1px solid border with light gray color */
+  padding: 20px; /* Add some padding for better spacing */
+  margin: 10px;
 }
-.primary-button {
-  padding: 0.9rem 1.75rem;
-  background-color: white;
-  outline: none;
-  border: none;
-  border-radius: 5rem;
-  font-size: 1.1rem;
-  cursor: pointer;
-  font-weight: 600;
-  transition: 0.2s;
+
+.quiz-section {
+  background-color: white; /* Light gray background for description section */
+  border: 5px solid var(--main-color); /* Add a 1px solid border with light gray color */
+  padding: 20px; /* Add some padding for better spacing */
+  margin: 10px;
 }
-.navbar-cart-icon {
-  font-size: 1.15rem;
+
+@media(max-width:576px) {
+  .description-section,
+  .progressbar-section,
+  .codesnippet-section,
+  .tutorial-section,
+  .cheatsheet-section,
+  .quiz-section {
+    width: 100%; 
+    margin: 10px;
+    padding: 10px;
+  }
 }
-.primary-button:hover {
-  background-color: rgb(234, 234, 234);
-}
-.navbar-menu-container svg {
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-.about-section-container {
-  margin-top: 5rem;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.about-background-image-container {
-  position: absolute;
-  left: -150px;
-  z-index: -2;
-}
-.about-section-image-container {
-  flex: 0.9;
-  margin-right: 1rem;
-}
-.about-section-text-container {
-  flex: 1;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-}
-.primary-subheading {
-  font-weight: 700;
-  color: #fe9e0d;
-  font-size: 1.15rem;
-}
-.about-buttons-container {
-  margin-top: 2rem;
-  display: flex;
-}
-.watch-video-button {
-  margin-left: 2rem;
-  background-color: transparent;
-  outline: none;
-  border: none;
-  border-radius: 5rem;
-  font-size: 1.1rem;
-  cursor: pointer;
-  font-weight: 600;
-  color: #484848;
-  transition: 0.2s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.watch-video-button svg {
-  font-size: 3rem;
-  margin-right: 1rem;
-}
-.contact-page-wrapper h1 {
-  max-width: 900px !important;
-}
-.contact-page-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin: 6rem 0rem;
-}
-.contact-form-container {
-  background-color: white;
-  max-width: 700px;
-  width: 100%;
-  margin-top: 3rem;
-  display: flex;
-  align-items: center;
-  padding: 1rem;
-  border-radius: 5rem;
-}
-.contact-form-container input {
-  flex: 1;
-  height: 100%;
-  border: none;
-  outline: none;
-  font-size: 1.3rem;
-  padding: 0.5rem 1rem;
-}
-.footer-wrapper {
-  margin: 6rem 0rem;
-  display: flex;
-  margin-top: 10rem;
-}
-.footer-logo-container {
-  max-width: 110px;
-}
-.footer-icons {
-  margin-top: 2.5rem;
-}
-.footer-icons svg {
-  font-size: 1.5rem;
-  margin-right: 1.25rem;
-  color: #585858;
-}
-.footer-section-two {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-}
-.footer-section-columns {
-  display: flex;
-  flex-direction: column;
-  min-width: 190px;
-}
-.footer-section-columns span {
-  margin: 0.25rem 0rem;
-  font-weight: 600;
-  color: #4c4c4c;
-  cursor: pointer;
-}
-.testimonial-section-bottom {
-  margin-top: 2rem;
-  background-color: white;
-  padding: 1.5rem 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 750px;
-  border-radius: 2rem;
-  flex-direction: column

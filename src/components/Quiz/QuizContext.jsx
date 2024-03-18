@@ -47,7 +47,6 @@ export const QuizProvider = ({ children }) => {
     setQuizStage('PROGRESS');
   };
 
-
   // Context value
   const contextValue = {
     quizStage,
