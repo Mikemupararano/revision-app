@@ -17,5 +17,5 @@ export default defineConfig({
       overlay: false,
     },
   },
-  base: "/revision-app/"
+  base: "/"
 });

@@ -5,9 +5,9 @@ import Quiz from '../Quiz/Quiz';
 import CheatSheets from '../CheatSheets/CheatSheets';
 import CodeSection from '../CodeSection/CodeSection';
 import Description from '../Description/Description';
-import HTML from '../HTML-course/HTML';
+import HTML from '../../pages/HTML-course/HTML';
 import CSSCourse from '../CSS-course/CSSCourse'; // Corrected import statement
-import JavaScript from '../JavaScript/JavaScript';
+import JavaScript from '../../pages/JavaScript/JavaScript';
 import QuizImage from '../../assets/HtmlImage.png';
 import ProgressImage from '../../assets/progressImage.png';
 import CodeSnippet from '../../assets/codeSnippetImage.png';

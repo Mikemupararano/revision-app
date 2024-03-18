@@ -1,13 +1,13 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './Navbar/Navbar';
-import HomePage from './Home/Home';
+import HomePage from '../pages/Home/Home';
 import Footer from './Footer/Footer';
 import ModulePage from './ModulePage/ModulePage';
 import ErrorBoundary from './ErrorBoundary/ErrorBoundary';
-import HTML from './HTML-course/HTML'
+import HTML from '../pages/HTML-course/HTML'
 import CheatSheets from './CheatSheets/CheatSheets';
-import JavaScript from './JavaScript/JavaScript';
+import JavaScript from '../pages/JavaScript/JavaScript';
 import CodeSection from './CodeSection/CodeSection';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 

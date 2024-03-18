@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-import Logo from './logo.png';
+import Logo from './logo2.png';
 
 function Navbar() {
   const [openLinks, setOpenLinks] = useState(false);
@@ -27,10 +27,10 @@ function Navbar() {
           <Link to="/about">About Us</Link> 
           {/* <Link to="/module">Module Pages</Link>  */}
           <Link to="/html">HTML</Link> 
-          <Link to="/csscourse">CSS</Link> 
+          <Link to="/css">CSS</Link> 
           <Link to="/javascript">JavaScript</Link>
-          <Link to="/codesection">Code Snipet</Link>
-          <Link to="/cheatsheets">Cheat Sheets</Link>
+          <Link to="/code">Code Snipet</Link>
+          {/* <Link to="/cheatsheets">Cheat Sheets</Link> */}
           {/* Add more navbar links as needed */}
         </div>
       </nav>
