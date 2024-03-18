@@ -1,0 +1,129 @@
+/* @import "./App.css"; */
+@import url('https://fonts.googleapis.com/css2?family=Mallanna&family=Tauri&display=swap" rel="stylesheet">');
+
+:root {
+  --font-size: 45px;
+  --font-weight: 600;
+  --font-right-side: 25px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container-fluid {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end; /* Align items to the right */
+  align-items: center;
+  gap: 20px; /* Add gap between items */
+}
+
+.navbar {
+  margin: 0; /* Remove default margin */
+  width: 100vw; /* Set width to 100% of viewport width */
+  height: 100px;
+  background-color: white;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between; /* Evenly distribute left and right sides */
+  align-items: center; /* Center vertically */
+  padding: 0; /* Add padding for better spacing */
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.logo {
+  display: flex;
+  position: relative;
+  top: 1px;
+  max-width: 250px;
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+
+  border-radius: 0;
+}
+
+.leftSide {
+  display: flex;
+  align-items: center;
+}
+
+.leftSide h1 {
+  margin: 0; /* Remove default margin */
+  color: white; /* Set text color */
+  font-size: var(--font-size); /* Adjust font size */
+  font-weight: var(--font-weight);
+}
+
+.rightSide {
+  display: flex;
+  align-items: flex-end;
+  flex-grow: 1;
+  justify-content: flex-end; 
+}
+
+.rightSide a {
+  color: #393536;
+  font-family: "Mallanna", sans-serif;
+  text-decoration: none;
+  margin: 0 10px;
+  padding-right: 10px;
+  margin-right: 20px;
+  font-size: var(--font-right-side); 
+  font-weight: var(--font-weight);
+}
+
+.container-fluid {
+  display: flex;
+  align-items: center;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-left: 20px; /* Add left margin for spacing between button and links */
+}
+
+@media only screen and (max-width: 830px) {
+  .navbar {
+    flex-direction: column; /* Adjust flex direction to stack elements vertically */
+    align-items: flex-start; /* Align items to the start of the container */
+    padding: 20px; /* Add padding for better spacing */
+  }
+
+  .rightSide {
+    flex-grow: 0; /* Reset flex-grow */
+    justify-content: flex-start; /* Align items to the start on smaller screens */
+  }
+
+  .rightSide a {
+    display: block; /* Display links as block elements */
+    margin: 0; /* Reset margin */
+    font-size: var(--font-right-side); /* Adjust font size */
+    font-weight: var(--font-weight);
+    margin-bottom: 11px; /* Add margin between links */
+  }
+
+  .rightSide button {
+    padding: 10px;
+    margin-top: 10px;
+    justify-content: var(--font-right-side);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .leftSide h1 {
+    font-size: 20px; /* Adjust font size for smaller screens */
+  }
+
+  .rightSide button {
+    margin-left: 0; /* Remove left margin for button on smaller screens */
+  }
+}
