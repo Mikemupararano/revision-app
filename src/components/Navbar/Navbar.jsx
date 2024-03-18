@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import './Navbar.css';
+import { NavLink } from 'react-router-dom';
+import './Navbar.css'; // Make sure the CSS file path is correct
 import Logo from './logo.png';
 
 function Navbar() {
@@ -13,16 +13,14 @@ function Navbar() {
   return (
     <div className="container-fluid text-white">
       <nav className="navbar">
-        {/* Logo and toggle button */}
         <div className={`leftSide ${openLinks ? 'open' : 'close'}`}>
-          <Link to="/">
+          <NavLink to="/">
             <img src={Logo} alt="logo" className="logo" />
-          </Link>
-          {/* <h1>CodeCraft</h1> */}
+          </NavLink>
           <div className="hiddenLinks"></div>
         </div>
-        {/* Navbar links */}
         <div className="rightSide">
+quiz/tidy
           <Link to="/">Home</Link>
           <Link to="/about">About Us</Link> 
           {/* <Link to="/module">Module Pages</Link>  */}
@@ -33,6 +31,7 @@ function Navbar() {
           <Link to="/cheatsheets">Cheat Sheets</Link>
           <Link to="/quiz">QUIZ</Link>
           {/* Add more navbar links as needed */}
+
         </div>
       </nav>
     </div>
