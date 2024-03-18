@@ -9,6 +9,7 @@ import HTML from './HTML-course/HTML'
 import CheatSheets from './CheatSheets/CheatSheets';
 import JavaScript from './JavaScript/JavaScript';
 import CodeSection from './CodeSection/CodeSection';
+import Quiz from './Quiz/Quiz';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {

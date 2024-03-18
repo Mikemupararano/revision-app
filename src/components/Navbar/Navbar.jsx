@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import './Navbar.css';
+import { NavLink } from 'react-router-dom';
+import './Navbar.css'; // Make sure the CSS file path is correct
 import Logo from './logo.png';
 
 function Navbar() {
@@ -13,25 +13,21 @@ function Navbar() {
   return (
     <div className="container-fluid text-white">
       <nav className="navbar">
-        {/* Logo and toggle button */}
         <div className={`leftSide ${openLinks ? 'open' : 'close'}`}>
-          <Link to="/">
+          <NavLink to="/">
             <img src={Logo} alt="logo" className="logo" />
-          </Link>
-          {/* <h1>CodeCraft</h1> */}
+          </NavLink>
           <div className="hiddenLinks"></div>
         </div>
-        {/* Navbar links */}
         <div className="rightSide">
-          <Link to="/">Home</Link>
-          <Link to="/about">About Us</Link> 
-          {/* <Link to="/module">Module Pages</Link>  */}
-          <Link to="/html">HTML</Link> 
-          <Link to="/csscourse">CSS</Link> 
-          <Link to="/javascript">JavaScript</Link>
-          <Link to="/codesection">Code Snipet</Link>
-          <Link to="/cheatsheets">Cheat Sheets</Link>
-          {/* Add more navbar links as needed */}
+          <NavLink exact to="/" activeClassName="active">Home</NavLink>
+          <NavLink to="/about" activeClassName="active">About Us</NavLink>
+          <NavLink to="/html" activeClassName="active">HTML</NavLink>
+           <NavLink to="/csscourse" activeClassName="active">Quiz</NavLink>
+          <NavLink to="/csscourse" activeClassName="active">CSS</NavLink>
+          <NavLink to="/javascript" activeClassName="active">JavaScript</NavLink>
+          <NavLink to="/codesection" activeClassName="active">Code Snippet</NavLink>
+          <NavLink to="/cheatsheets" activeClassName="active">Cheat Sheets</NavLink>
         </div>
       </nav>
     </div>

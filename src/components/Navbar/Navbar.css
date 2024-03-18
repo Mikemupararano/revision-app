@@ -9,6 +9,10 @@
   margin: 0;
   box-sizing: border-box;
 }
+.active {
+  color:white; /* Change the color to indicate active tab */
+  font-weight: bold; /* Optionally, you can add other styles */
+}
 
 .container-fluid {
   display: flex;
