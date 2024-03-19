@@ -12,8 +12,8 @@
         "preview": "vite preview"
     },
     "dependencies": {
+
         "@fortawesome/fontawesome-svg-core": "^6.5.1",
-        "_comment": "This is a comment. It will be ignored by tools that use this JSON file.",
         "@fortawesome/free-solid-svg-icons": "^6.5.1",
         "@fortawesome/react-fontawesome": "^0.2.0",
         "@codemirror/lang-javascript": "^6.2.2",
