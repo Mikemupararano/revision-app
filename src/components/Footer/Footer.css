@@ -4,7 +4,7 @@
   background-color: #FF680A;
   padding: 20px;
   text-align: center;
-  color: aqua;
+  color: white;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -16,15 +16,28 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-color:white;
+  color:white;
 }
 
-.footer p {
+name {
   margin: 0;
   color: white;
+  text-align: center;
 }
+
+
 a { 
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   color: white;
+  text-align: center;
+  padding: 10px;
+  
 }
+
+p { 
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    text-align: center;
+  }

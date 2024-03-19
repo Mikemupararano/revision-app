@@ -1,0 +1,134 @@
+:root {
+    --text-color: white;
+    --home-bg-color:#72b01d;
+  }
+  
+  .home {
+    /* background-color:var(--home-bg-color); */
+    background-image: linear-gradient(#6c6cce80, rgba(13, 59, 102, 0.5), rgba(255, 255, 0, 0.5)),
+                    url("../../media/examples/lizard.png");
+                    
+  
+    width: 100%;
+    color: var(--text-color);
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Change to center */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; /* You can experiment with different values */
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  
+  }
+  
+  
+  .headerContainer {
+    width: auto;
+    margin-left: 50px;
+  }
+  
+  .headerContainer h1 {
+    font-size: 90px;
+    height: 60px;
+    font-weight: 50;
+    color: var(--text-color);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .headerContainer p {
+    padding: 0;
+    font-size: 40px;
+    font-weight: lighter;
+    color:orangered;
+  }
+  
+  .headerContainer button {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-content: center;
+    background-color: #2ec4b6;
+    height: auto;
+    width: 180px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  .headerContainer button:hover {
+    background-color: #07090a;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+  }
+  
+  @media only screen and (max-width: 650px) {
+    .home {
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .headerContainer h1,
+    .headerContainer p {
+    }
+  
+    .headerContainer {
+      margin-left: 0px;
+      border-radius: 10px;
+      padding: 10px;
+      width: 80%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      /*background-color: #001242;*/
+      color: white;
+    }
+  
+    .headerContainer h1 {
+      font-size: 40px;
+      height: 30px;
+      color: var(--text-color);
+    }
+  
+    .headerContainer p {
+      font-size: 30px;
+      color: var(--text-color);
+      /*background-color: aqua;*/
+    }
+  
+    .headerContainer button {
+      background-color: white;
+      color: #121619;
+      margin-bottom: 30px;
+    }
+  
+    .headerContainer button:hover {
+      background-color: rgb(225, 225, 225);
+      color: var(--text-color);
+    }
+  }
+  
+  .home-page {
+    background-image: url('path/to/your/image.jpg');
+    background-size: cover; /* Adjust this as needed */
+    background-repeat: no-repeat; /* Adjust this as needed */
+    /* Add any other background properties as needed */
+  }
+  
+  .home-description  {
+    width: 600px;
+    height: 600px;
+    /*background-color: var(--text-color);*/
+    border-radius: 300px;
+    color: white;
+  }
+  img {
+    display: flex;
+   position: relative;
+   top: 550px;
+    height: 400px;
+    width: 400px;
+    border-radius: 200px;
+  }

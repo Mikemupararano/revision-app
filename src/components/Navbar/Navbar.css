@@ -1,3 +1,6 @@
+/* @import "./App.css"; */
+@import url('https://fonts.googleapis.com/css2?family=Mallanna&family=Tauri&display=swap" rel="stylesheet">');
+
 :root {
   --font-size: 45px;
   --font-weight: 600;
@@ -8,10 +11,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
-.active {
-  color:white; /* Change the color to indicate active tab */
-  font-weight: bold; /* Optionally, you can add other styles */
 }
 
 .container-fluid {
@@ -26,23 +25,27 @@
   margin: 0; /* Remove default margin */
   width: 100vw; /* Set width to 100% of viewport width */
   height: 100px;
-  background-color: #780000;
+  background-color: white;
   display: flex;
   gap: 20px;
   justify-content: space-between; /* Evenly distribute left and right sides */
   align-items: center; /* Center vertically */
   padding: 0; /* Add padding for better spacing */
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .logo {
   display: flex;
   position: relative;
   top: 1px;
-  max-width: 200px;
-  height: 90px;
+  max-width: 250px;
+  height: 80px;
   justify-content: center;
   align-items: center;
-  padding-left: 10px;
+  margin-left: 20px;
+
+  border-radius: 0;
 }
 
 .leftSide {
@@ -59,16 +62,19 @@
 
 .rightSide {
   display: flex;
-  align-items: center;
-  flex-grow: 1; /* Add this to make the right side take up remaining space */
-  justify-content: center; /* Center the items horizontally */
+  align-items: flex-end;
+  flex-grow: 1;
+  justify-content: flex-end; 
 }
 
 .rightSide a {
-  color: white;
+  color: #393536;
+  font-family: "Mallanna", sans-serif;
   text-decoration: none;
-  margin: 0 15px; /* Adjust margin as needed */
-  font-size: var(--font-right-side); /* Adjust font size */
+  margin: 0 10px;
+  padding-right: 10px;
+  margin-right: 20px;
+  font-size: var(--font-right-side); 
   font-weight: var(--font-weight);
 }
 
@@ -108,6 +114,7 @@ button {
   .rightSide button {
     padding: 10px;
     margin-top: 10px;
+    justify-content: var(--font-right-side);
   }
 }
 
