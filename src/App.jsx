@@ -7,7 +7,7 @@ function App() {
     <>
       <h1>Hello Team!</h1>
       <section>
-        <h2>javascript</h2>
+        <h2>Javascript</h2>
         <p> </p>
         <object data="/pdfs/javascript.pdf" type="application/pdf" width="200" height="250"></object>
       </section >

@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { Document, Page } from 'react-pdf';
-import pdf from "../../assets/Javascript.pdf"
+import pdf from "../../assets/javascript.pdf"
+import pdf from "../../assets/html.pdf"
+import pdf from "../../assets/css.pdf"
 
 function CheatSheets(props) {
     const [numPages, setNumPages] = useState();
