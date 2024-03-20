@@ -32,8 +32,8 @@ import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import About from './pages/About/About';
 import HomePage from './pages/Home/Home';
-import HTML from './pages/HTML-course/HTML';
-import CssCourse from './pages/CssCourse/CssCourse';
+import HTML from './components/HTML-course/HTML';
+import CssCourse from './components/CssCourse/CssCourse';
 import JavaScript from './pages/JavaScript/JavaScript';
 // import CodeSection from './components/CodeSection/CodeSection'
 import Quiz from './components/Quiz/Quiz';
