@@ -22,7 +22,7 @@ const CssCourse = () => {
           <div className="row">
             <div className="col-md tutorial-section">
               <h1>Tutorial</h1>
-              <Tutorial embedId="ieTHC78giGQ" />
+              <Tutorial embedId="ieTHC78giGQ"  style={{ width: "100%", height: "100%" }}/>
             </div>
             <div className="col-md cheatsheet-section">
               <h1>Cheat Sheets</h1>

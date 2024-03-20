@@ -83,12 +83,15 @@
     }
 }
 
-.tutorial-wrapper {
-    max-width: 100%; /* Ensure the video doesn't exceed its container's width */
-    overflow: hidden; /* Hide any overflowing content */
+.tutorial-section {
+    position: relative;
+    padding-bottom: 40%; /* 16:9 */
+    height: 0;
   }
-  
-  .tutorial-wrapper iframe {
-    width: 100%; /* Make the video fill its container */
-    height: auto; /* Maintain aspect ratio */
+  .tutorial-section iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
