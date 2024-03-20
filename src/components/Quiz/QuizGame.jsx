@@ -89,7 +89,7 @@ function QuizGame() {
     return (
     <div className="quiz-game">
         <h1>Game</h1>
-        <div className="container mt-sm-5 my-1">
+        <div className="game-container">
             {showSummary ? (
                 <QuizEnd
                     numberOfQuestions={filteredQuestions.length}

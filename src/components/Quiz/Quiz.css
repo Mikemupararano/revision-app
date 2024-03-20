@@ -171,11 +171,11 @@
 
 /*QUESTIONS*/
 
-.container {
+.game-container {
     background-color: white;
     color: var(--main-color);
     border-radius: 10px;
-    padding: 10px;
+    padding: 5px;
     border: 5px solid var(--secondary-color);
     border-radius: 10px;
 }
@@ -275,7 +275,6 @@
     padding-top: 50px;
     border-radius: 10px;
     border: 5px solid var(--secondary-color);
-    border-radius: 10px;
 }
 
 .end-screen h1{
@@ -311,29 +310,37 @@
     border: 5px solid var(--secondary-color);
     border-radius: 10px;
 }
-
 .progress-screen h1{
     color: var(--accent-color);
-    font-size: 44px;
+    font-size: 40px;
     padding-bottom: 30px;
 }
+
+.progress-container{
+    background-color: white;
+    border-radius: 10px;
+    color: var(--main-color);
+}
+
 .progress-item {
-    padding: 25px;
+    padding: 15px;
+    color: var(--main-color);
 }
 .progress-screen h3{
     font-weight: 600;
 }
+
 /* Define colors for each language */
 .progress-screen .progress-bar-html {
-    background-color: var(--main-color)
+    background-color: var(--main-color);
 }
 
 .progress-screen .progress-bar-css {
-    background-color: var(--secondary-color)
+    background-color: var(--secondary-color);
 }
 
 .progress-screen .progress-bar-js {
-    background-color: var(--accent-color)
+    background-color: var(--accent-color);
 }
 
 @media(max-width:576px) {
@@ -345,8 +352,14 @@
         align-items: center;
         justify-content: center;
         margin: 5px;
-        margin-top: 100px;
+        margin-top: 150px;
         margin-bottom: 100px;
+    }
+    .btn-exit {
+        position: fixed;
+        top: 300px;
+        right: 155px;
+        z-index: 9999; /* Ensure it's above other elements */
     }
     .quiz-exit{
         margin-top: 20px;
@@ -356,6 +369,12 @@
         margin-top: 20px;
         height: 100vh;
     }
+    .start-screen p {
+        font-size: 15px;
+        padding: 0px;
+        margin-top: 20px;
+        text-align: center;
+    }
     #languageText {
         margin-bottom: 15px;
         font-size: 25px;
@@ -363,6 +382,7 @@
     #language {
         width: 200px;
         height: 40px;
+        margin-top: 20px;
         border-radius: 10px;
     }
     .quiz-game {
@@ -383,22 +403,45 @@
         font-weight: 600;
         padding: 0;
     }
-    .summary{
-        margin-bottom: 10px;
-    }
+
     .end-screen {
-        height: 60vh;
-        padding: 10px;
-        padding-top: 70px;
+        height: 500px;
+        color: white;
+        padding: 5px;
+        padding-top: 5px;
+        border-radius: 10px;
+        border: 5px solid var(--secondary-color);
     }
     
     .end-screen h1{
-        padding-top: 20px;
+        color: var(--accent-color);
+        font-size: 28px;
+        margin: 10px;
+        padding: 30px;
+    }
+    
+    .end-screen h2{
+        display: block;
+        text-align: center;
+        color: var(--secondary-color);
+        font-size: 20px;
+        margin: 0px;
+    }
+    .end-button{
+        display: block;
+        flex-direction: column;
+    }
+    .summary{
+        background-color: white;
+        color: var(--main-color);
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 10px;
     }
     .progress-screen {
         margin-top: 100px;
         height: 100vh;
-        padding: 20px;;
+        padding: 10px;;
     }
     
     .progress-screen h1{

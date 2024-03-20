@@ -53,7 +53,7 @@ useEffect(() => {
         <h1>Quiz Progress</h1>
 
         {/* Progress bars for each language */}
-        <div className="container">
+        <div className="progress-container">
             {Object.keys(scores).map(language => (
                 <div className="progress-item" key={language}>
                     <h3>{language.toUpperCase()} Progress: {calculatePercentage(language)}%</h3>
