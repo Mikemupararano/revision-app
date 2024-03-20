@@ -2,7 +2,7 @@ import React from 'react';
 import Description from '../../components/Description/Description';
 import CodeSection from '../../components/CodeSection/CodeSection';
 import '../ModulePage.css';
-import Tutorial from "../../components/Tutorial/Tutorial"
+import Tutorial from "../../components/Tutorial/Tutorial";
 
 const CssCourse = () => {
   return (
@@ -11,7 +11,7 @@ const CssCourse = () => {
         <div className="col description-section">
           <Description searchTerm={"css"} />
         </div>
-      </div >
+      </div>
       <div className="row">
         <div className="col codesnippet-section">
           <CodeSection />
@@ -26,7 +26,7 @@ const CssCourse = () => {
             </div>
             <div className="col-md cheatsheet-section">
               <h1>Cheat Sheets</h1>
-              <object data="/pdfs/css.pdf" type="application/pdf" width="450px" height="450px"></object>
+              <object data="/pdfs/css.pdf" type="application/pdf" style={{ width: "100%", height: "100%" }} />
             </div>
           </div>
         </div>
@@ -35,5 +35,4 @@ const CssCourse = () => {
   );
 }
 
-
-export default CssCourse
+export default CssCourse;

@@ -26,7 +26,6 @@ const HTML = () => {
             </div>
             <div className="col-md cheatsheet-section">
               <h1>Cheat Sheets</h1>
-              <object data="/pdfs/html.pdf" type="application/pdf"></object>
             </div>
           </div>
         </div>
