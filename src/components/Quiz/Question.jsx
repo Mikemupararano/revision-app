@@ -11,7 +11,7 @@ const Question = ({ question, currentQuestionIndex, handleAnswerClick, userAnswe
       </div>
       <div className="ml-md-3 ml-sm-3 pl-md-5" id="options">
         <div className="questionText">
-        <h1>{question.questionText}</h1>
+          <h1>{question.questionText}</h1>
         </div>
         {question.answerOptions.map((option, index) => (
           <label key={index} className="options" style={{ color: userAnswers[currentQuestionIndex] === option.answerText ? (option.isCorrect ? '#218575' : 'red') : 'inherit' }}>
@@ -29,7 +29,7 @@ const Question = ({ question, currentQuestionIndex, handleAnswerClick, userAnswe
       </div>
       <div className="buttonQ pt-3">
         <div id="prev">
-          <button className="btn-small"  style={{ color: '#218575' }} onClick={handlePreviousButtonClick} disabled={currentQuestionIndex === 0}>
+          <button className="btn-small" style={{ color: '#218575' }} onClick={handlePreviousButtonClick} disabled={currentQuestionIndex === 0}>
             Previous
           </button>
         </div>

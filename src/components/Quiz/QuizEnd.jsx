@@ -15,7 +15,7 @@ function QuizEnd({ numberOfQuestions, selectedLanguage }) {
         };
         // Retrieve previously stored quiz results from local storage, or initialize an empty array
         const storedResults = JSON.parse(localStorage.getItem('quizResults')) || [];
-        
+
         // Check if there's already a stored result for the selected language
         const existingResultIndex = storedResults.findIndex(result => result.selectedLanguage === selectedLanguage);
         // If there's already a stored result for the selected language
@@ -30,7 +30,7 @@ function QuizEnd({ numberOfQuestions, selectedLanguage }) {
             storedResults.push(quizResult);
             localStorage.setItem('quizResults', JSON.stringify(storedResults)); // Store the new result in local storage
         }
-    
+
         handleProgress(); // Call handleShowProgress function from context
     };
 
