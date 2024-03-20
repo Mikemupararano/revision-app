@@ -9,20 +9,21 @@ function App() {
       <section>
         <h2>Javascript</h2>
         <p> </p>
-        <object data="/pdfs/javascript.pdf" type="application/pdf" width="200" height="250"></object>
+        c
+        <object data="/pdfs/javascript.pdf" type="application/pdf" width="450px" height="450px"></object>
       </section >
 
 
       <section>
         <h2>CSS</h2>
         <p></p>
-        <object data="/pdfs/javascript.pdf" type="application/pdf" width="200" height="250"></object>
+        <object data="/pdfs/javascript.pdf" type="application/pdf" width="450px" height="450px"></object>
       </section >
 
       <section>
         <h2>HTML</h2>
         <p></p>
-        <object data="/pdfs/javascript.pdf" type="application/pdf" width="200" height="250"></object>
+        <object data="/pdfs/javascript.pdf" type="application/pdf" width="450px" height="450px"></object>
       </section >
     </>
 
