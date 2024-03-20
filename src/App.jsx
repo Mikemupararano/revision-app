@@ -25,7 +25,7 @@
 //export default App;
 
 // import React from 'react';
-import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom'; // Import necessary components from react-route
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'; // Import necessary components from react-router-dom
 // import Description from '/Users/christy/Desktop/revision-app/src/components/Description/Description.jsx';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './components/Navbar/Navbar';
@@ -39,6 +39,7 @@ import JavaScript from './pages/JavaScript/JavaScript';
 import Quiz from './components/Quiz/Quiz';
 import { QuizProvider } from './components/Quiz/QuizContext';
 import { Toaster } from 'react-hot-toast';
+// import ProgressBar from './components/ProgressBar/ProgressBar'
 
 
 function App() {
@@ -46,9 +47,9 @@ function App() {
     <div className="App">
     <Router>
       <Navbar />
+      {/* <ProgressBar /> */}
       <Routes>
         <Route path="/" element={<HomePage />}/>
-        <Route path="/revisionapp" element={<HomePage />}/>
         <Route path="/about" element={<About />}/>
         <Route path="/html" element={<HTML />}/>
         <Route path="/css" element={<CssCourse />}/>

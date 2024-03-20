@@ -28,8 +28,8 @@ export const QuizProvider = ({ children }) => {
     updateSelectedLanguage(e.target.value); // Update selected language
   };
 
-   // Function to update STAGE
-   const updateQuizStage = (newStage) => {
+  // Function to update STAGE
+  const updateQuizStage = (newStage) => {
     setQuizStage(newStage);
   };
 
@@ -46,7 +46,6 @@ export const QuizProvider = ({ children }) => {
   const handleProgress = () => {
     setQuizStage('PROGRESS');
   };
-
 
   // Context value
   const contextValue = {

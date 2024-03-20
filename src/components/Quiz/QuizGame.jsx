@@ -1,12 +1,13 @@
-import React, { useContext, useState } from 'react';
+import { useContext, useState } from 'react';
 import { QuizContext } from './QuizContext';
 import './Quiz.css';
 import questions from '../../data/quiz.json';
 import Question from './Question';
 import QuizEnd from './QuizEnd';
+import { toast } from 'react-hot-toast';
 
 function QuizGame() {
-    const { handleEnd, selectedLanguage, score, setScore } = useContext(QuizContext);
+    const { handleEnd, selectedLanguage, setScore } = useContext(QuizContext);
 
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [userAnswers, setUserAnswers] = useState(Array(questions.length).fill(null));// Initialize state to hold user answers for each question, initially filled with null values, using the number of questions obtained from the 'questions' array.
@@ -29,9 +30,19 @@ function QuizGame() {
         if (selectedOption === filteredQuestions[currentQuestionIndex].answerOptions[correctAnswerIndex].answerText) {
             // If the selected option is correct, set the answer feedback to 'Correct!'
             setAnswerFeedback('Correct!');
+            toast.success('Well done! Your answer is correct.', {
+                icon: '👏', style: {
+                    border: '5px solid rgb(255, 174, 0)',
+                },
+            })
         } else {
             // If the selected option is incorrect, set the answer feedback to 'Wrong!'
             setAnswerFeedback('Wrong!');
+            toast.error('Oops! Wrong answer.', {
+                style: {
+                    border: '5px solid red',
+                },
+            });
         }
     };
 
@@ -76,31 +87,31 @@ function QuizGame() {
     };
 
     return (
-    <div className="quiz-game">
-        <h1>Game</h1>
-        <div className="container mt-sm-5 my-1">
-            {showSummary ? (
-                <QuizEnd
-                    numberOfQuestions={filteredQuestions.length}
-                    selectedLanguage={selectedLanguage}
-                />
+        <div className="quiz-game">
+            <h1>Game</h1>
+            <div className="game-container">
+                {showSummary ? (
+                    <QuizEnd
+                        numberOfQuestions={filteredQuestions.length}
+                        selectedLanguage={selectedLanguage}
+                    />
                 ) : (
-                <Question
-                    question={filteredQuestions[currentQuestionIndex]}
-                    currentQuestionIndex={currentQuestionIndex}
-                    userAnswers={userAnswers}
-                    feedback={answerFeedback}
-                    handleAnswerClick={handleAnswerClick}
-                    handlePreviousButtonClick={handlePreviousButtonClick}
-                    handleNextButtonClick={handleNextButtonClick}
-                    isLastQuestion={currentQuestionIndex === filteredQuestions.length - 1}
-                />
-            )}
+                    <Question
+                        question={filteredQuestions[currentQuestionIndex]}
+                        currentQuestionIndex={currentQuestionIndex}
+                        userAnswers={userAnswers}
+                        feedback={answerFeedback}
+                        handleAnswerClick={handleAnswerClick}
+                        handlePreviousButtonClick={handlePreviousButtonClick}
+                        handleNextButtonClick={handleNextButtonClick}
+                        isLastQuestion={currentQuestionIndex === filteredQuestions.length - 1}
+                    />
+                )}
+            </div>
+            <div className="buttonsQG">
+                <button className="btn-small text-black" onClick={handleEnd}>FINISH</button>
+            </div>
         </div>
-        <div className="buttonsQG">
-            <button className="btn-small text-black" onClick={handleEnd}>FINISH</button>
-        </div>
-    </div>
     );
 }
 
