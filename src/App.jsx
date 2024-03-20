@@ -39,7 +39,7 @@ import JavaScript from './pages/JavaScript/JavaScript';
 import Quiz from './components/Quiz/Quiz';
 import { QuizProvider } from './components/Quiz/QuizContext';
 import { Toaster } from 'react-hot-toast';
-import ProgressBar from './components/ProgressBar/ProgressBar'
+// import ProgressBar from './components/ProgressBar/ProgressBar'
 
 
 function App() {
@@ -47,7 +47,7 @@ function App() {
     <div className="App">
     <Router>
       <Navbar />
-      <ProgressBar />
+      {/* <ProgressBar /> */}
       <Routes>
         <Route path="/" element={<HomePage />}/>
         <Route path="/about" element={<About />}/>

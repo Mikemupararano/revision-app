@@ -5,11 +5,11 @@ const Question = ({ question, currentQuestionIndex, handleAnswerClick, userAnswe
   const isAnswerSelected = userAnswers[currentQuestionIndex] !== null;
 
   return (
-    <div className="question ml-sm-5 pl-sm-5 pt-2">
-      <div className="qLangAndNum py-2 h5 ">
+    <div className="question ml-sm-5 pl-sm-5">
+      <div className="qLangAndNum">
         <h2>{question.language.toUpperCase()} Question {currentQuestionIndex} / 10</h2>
       </div>
-      <div className="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3" id="options">
+      <div className="ml-md-3 ml-sm-3 pl-md-5" id="options">
         <div className="questionText">
         <h1>{question.questionText}</h1>
         </div>

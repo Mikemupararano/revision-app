@@ -40,10 +40,9 @@ function QuizEnd({ numberOfQuestions, selectedLanguage }) {
                 <h1>Quiz Summary</h1>
                 <h2>Your score: {score} out of {numberOfQuestions}</h2>
             </div>
-            <div className="quiz-end">
+            <div className="end-button">
                 <button className="btn-small text-black" onClick={handleFinishGame}>SAVE</button>
                 <button className="btn-small text-black" onClick={handleStart}>PLAY AGAIN</button>
-                <button className="btn-small text-black" onClick={handleProgress}>PROGRESS</button>
             </div>
         </div>
     );
