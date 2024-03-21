@@ -27,7 +27,7 @@ const About = () => {
             </a>
           </div>
           <div className="person">
-            <a href="https://github.com/eyram">
+            <a href="https://github.com/Quarshie30">
               <FaGithub />
               <p>Eyram</p>
             </a>
