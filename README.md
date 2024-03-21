@@ -1,4 +1,5 @@
-https://designs-by-kate.github.io/CodeCraft/
+
+https://main--codecraftapp.netlify.app/#/
 
 # CodeCraft
 ## Description
